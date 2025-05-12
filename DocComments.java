@@ -10,7 +10,9 @@ public class DocComments {
         double bmi = calculateBodyMassIndex(1.55, 44.50);
         System.out.println(bmi);
 
-        //Ejecuta el nuevo método 
+        //Ejecuta el nuevo método
+        System.out.println("Según tus datos, el rango en el que te encuentras en el índice de masa corportal es el siguiente:");
+        System.out.println(bodyMassIndex(bmi));
     }
 
     /**
@@ -67,6 +69,24 @@ public class DocComments {
     Obeso Clase II	35 - 40
     Obeso Clase III	> 40 */
 
+    public static String bodyMassIndex(double bmi) {
+        if (bmi < 16) {
+            return "Delgadez severa";
+        } else if (bmi >= 16 && bmi < 17) {
+            return "Delgadez moderada";
+        } else if (bmi >= 17 && bmi < 18.5) {
+            return "Delgadez leve";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            return "Normal";
+        } else if (bmi >= 25 && bmi < 30) {
+            return "Sobrepeso";
+        } else if (bmi >= 30 && bmi < 35) {
+            return "Obeso Clase I";
+        } else if (bmi >= 35 && bmi < 40) {
+            return "Obeso Clase II";
+        } else {
+            return "Obeso Clase III";
+        }
 
-
+    }
 }
